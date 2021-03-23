@@ -1,10 +1,5 @@
 function App() {
-    return (
-        <div>
-            <p>tomek</p>
-            <h1>tomek2</h1>
-        </div>
-    );
+    return <div />;
 }
 
 export default App;
