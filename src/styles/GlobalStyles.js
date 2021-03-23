@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     --grey: #efefef;
   }
   html {
+    background-color: var(--white);
     font-size: 10px;
   }
 
@@ -30,6 +31,9 @@ const GlobalStyles = createGlobalStyle`
     &:hover {
       --cast: 4px;
     }
+    &:focus {
+      outline: none;
+  }
   }
 
   body::-webkit-scrollbar {
