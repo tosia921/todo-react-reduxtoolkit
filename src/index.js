@@ -1,19 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
 
 import GlobalStyles from './styles/GlobalStyles';
 import Typography from './styles/Typography';
-
 import 'normalize.css';
 
+import store from './redux/store';
+
 ReactDOM.render(
-    <React.StrictMode>
-        <GlobalStyles />
-        <Typography />
-        <App />
-    </React.StrictMode>,
+    <Provider store={store}>
+        <React.StrictMode>
+            <GlobalStyles />
+            <Typography />
+            <App />
+        </React.StrictMode>
+    </Provider>,
     document.getElementById('root')
 );
 

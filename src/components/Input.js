@@ -2,13 +2,20 @@
 
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../redux/todo/todoSlice';
 
 const Input = () => {
-    const [todo, addTodo] = useState('');
+    const [Typedtodo, setTodo] = useState('');
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`Submitting Todo ${todo}`);
+        const todo = {
+            id: Math.random(),
+            content: Typedtodo,
+        };
+        dispatch(addTodo(todo));
     };
 
     return (
@@ -16,9 +23,11 @@ const Input = () => {
             <form onSubmit={handleSubmit}>
                 <label htmlFor="todo">
                     type in your todo:
-                    <input type="text" id="todo" value={todo} onChange={(e) => addTodo(e.target.value)} />
+                    <input type="text" id="todo" value={Typedtodo} onChange={(e) => setTodo(e.target.value)} />
                 </label>
-                <button type="submit">Add</button>
+                <button type="submit" onSubmit={handleSubmit}>
+                    Add
+                </button>
             </form>
         </StyledInput>
     );
