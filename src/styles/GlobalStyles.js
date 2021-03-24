@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     --yellow: #ffc600;
     --white: #fff;
     --grey: #efefef;
+    --darkGrey: #bfbfbf;
   }
   html {
     background-color: var(--white);
@@ -34,22 +35,6 @@ const GlobalStyles = createGlobalStyle`
     &:focus {
       outline: none;
   }
-  }
-
-  body::-webkit-scrollbar {
-    width: 12px;
-  }
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--red) var(--white);
-  }
-  body::-webkit-scrollbar-track {
-    background: var(--white);
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--red) ;
-    border-radius: 6px;
-    border: 3px solid var(--white);
   }
 
   img {

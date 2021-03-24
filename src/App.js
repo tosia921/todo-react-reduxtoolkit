@@ -1,20 +1,30 @@
 import styled from 'styled-components';
 import Input from './components/Input';
+import TodosContainer from './components/TodosContainer';
 
 function App() {
     return (
-        <AppContainer>
-            <Input />
-        </AppContainer>
+        <>
+            <StyledH1>TODO APP</StyledH1>
+            <AppContainer>
+                <Input />
+                <TodosContainer />
+            </AppContainer>
+        </>
     );
 }
 
 export default App;
 
 const AppContainer = styled.div`
-    height: 100vh;
-    width: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    display: flex;
     align-items: center;
+`;
+
+const StyledH1 = styled.h1`
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
 `;

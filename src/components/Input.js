@@ -16,6 +16,7 @@ const Input = () => {
             content: Typedtodo,
         };
         dispatch(addTodo(todo));
+        setTodo('');
     };
 
     return (
@@ -39,6 +40,7 @@ const StyledInput = styled.div`
     padding: 1rem;
     background-color: var(--grey);
     border-radius: 5px;
+    margin-bottom: 2rem;
 
     form {
         width: 40vw;

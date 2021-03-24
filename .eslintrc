@@ -3,8 +3,9 @@
       "wesbos"
     ],
     "rules": {
-      "no-console": 2,
+      "no-console": 0,
       "import/no-named-as-default": 0,
+      "react/prop-types": "off",
       "prettier/prettier": [
         "error",
         {
