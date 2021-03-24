@@ -11,11 +11,13 @@ const Input = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const todo = {
-            id: Math.random(),
-            content: Typedtodo,
-        };
-        dispatch(addTodo(todo));
+        dispatch(
+            addTodo({
+                content: Typedtodo,
+                completed: false,
+                id: Date.now(),
+            })
+        );
         setTodo('');
     };
 

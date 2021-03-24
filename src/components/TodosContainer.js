@@ -8,9 +8,9 @@ const TodosContainer = () => {
     console.log(todos);
     return (
         <StyledTodoContainer>
-            {todos.length > 0
-                ? todos.map((todo) => <SingleTodo key={todo.payload.id} content={todo.payload.content} />)
-                : null}
+            {todos.map((todo) => (
+                <SingleTodo key={todo.id} content={todo.content} id={todo.id} />
+            ))}
         </StyledTodoContainer>
     );
 };
