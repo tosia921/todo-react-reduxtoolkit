@@ -65,4 +65,4 @@ In future projects with React/Redux I would like to focus on:
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
-- LinkedIn - [@yourusername](https://www.linkedin.com/in/tomasz-posiada%C5%82a-3a05391b0/)
+- LinkedIn - [My LinkedIn](https://www.linkedin.com/in/tomasz-posiada%C5%82a-3a05391b0/)
