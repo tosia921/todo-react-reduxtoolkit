@@ -5,11 +5,11 @@ import SingleTodo from './SingleTodo';
 
 const TodosContainer = () => {
     const todos = useSelector((state) => state.todos.todosArray);
-    console.log(todos);
+
     return (
         <StyledTodoContainer>
             {todos.map((todo) => (
-                <SingleTodo key={todo.id} content={todo.content} id={todo.id} />
+                <SingleTodo key={todo.id} content={todo.content} id={todo.id} completed={todo.completed} />
             ))}
         </StyledTodoContainer>
     );
