@@ -8,10 +8,23 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: #efefef;
     --darkGrey: #bfbfbf;
+    --green: #49E20E;
+  }
+  * {
+  box-sizing: border-box;
   }
   html {
     background-color: var(--white);
     font-size: 10px;
+  
+    @media only screen and (max-width: 450px) {
+        font-size: 8px;
+    }
+    @media only screen and (max-width: 350px) {
+        font-size: 6px;
+    }
+  }
+    
     
   }
 

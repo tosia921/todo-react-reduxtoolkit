@@ -33,6 +33,21 @@ const ActiveMenuContainer = styled.div`
     border-radius: 5px;
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 1000px) {
+        width: 50vw;
+    }
+    @media only screen and (max-width: 800px) {
+        width: 60vw;
+    }
+    @media only screen and (max-width: 660px) {
+        width: 70vw;
+    }
+    @media only screen and (max-width: 575px) {
+        width: 80vw;
+    }
+    @media only screen and (max-width: 500px) {
+        width: 90vw;
+    }
 
     .clear-buttons {
         margin-left: auto;

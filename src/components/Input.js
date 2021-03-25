@@ -44,9 +44,25 @@ const StyledInput = styled.div`
     padding: 1rem;
     background-color: var(--grey);
     border-radius: 5px;
+    width: 40vw;
+    @media only screen and (max-width: 1000px) {
+        width: 50vw;
+    }
+    @media only screen and (max-width: 800px) {
+        width: 60vw;
+    }
+    @media only screen and (max-width: 660px) {
+        width: 70vw;
+    }
+    @media only screen and (max-width: 575px) {
+        width: 80vw;
+    }
+    @media only screen and (max-width: 500px) {
+        width: 90vw;
+    }
 
     form {
-        width: 40vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -61,9 +77,10 @@ const StyledInput = styled.div`
             input {
                 width: 90%;
                 margin-bottom: 1rem;
-                border: 2px solid var(--black);
+                border: 3px solid var(--black);
+                background-color: var(--darkGrey);
                 border-radius: 5px;
-                padding: 0.5rem 2rem;
+                padding: 1rem 2rem;
                 font-size: 2rem;
 
                 &:focus {
