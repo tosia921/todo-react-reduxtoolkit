@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Input from './components/Input';
 import TodosContainer from './components/TodosContainer';
+import ActionMenuBottom from './components/ActionMenuBottom';
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
             <AppContainer>
                 <Input />
                 <TodosContainer />
+                <ActionMenuBottom />
             </AppContainer>
         </>
     );
@@ -17,7 +19,6 @@ function App() {
 export default App;
 
 const AppContainer = styled.div`
-    display: flex;
     flex-direction: column;
     display: flex;
     align-items: center;

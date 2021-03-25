@@ -12,10 +12,12 @@ const GlobalStyles = createGlobalStyle`
   html {
     background-color: var(--white);
     font-size: 10px;
+    
   }
 
   body {
     font-size: 2rem;
+    box-sizing: border-box;
   }
 
   button {
