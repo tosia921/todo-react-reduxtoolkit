@@ -25,7 +25,7 @@ This is a Todo App designed and developed by myself in order to practice React w
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://605c95298ab4281cbf24ea5e--inspiring-heisenberg-41fe40.netlify.app/](https://605c95298ab4281cbf24ea5e--inspiring-heisenberg-41fe40.netlify.app/)
 
 ## My process
 
