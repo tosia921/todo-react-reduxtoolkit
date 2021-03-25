@@ -25,7 +25,7 @@ const SingleTodoContainer = styled.li`
     height: fit-content;
     padding: 1rem;
     border-radius: 5px;
-    background-color: ${({ completed }) => (completed ? 'var(--green)' : 'var(--yellow)')};
+    background-color: ${({ completed }) => (completed ? 'var(--red)' : 'var(--darkGrey)')};
     margin-bottom: 1rem;
     display: flex;
     align-items: bottom;

@@ -6,7 +6,9 @@ import ActionMenuBottom from './components/ActionMenuBottom';
 function App() {
     return (
         <>
-            <StyledH1>TODO APP</StyledH1>
+            <StyledH1>
+                <mark>TODO APP</mark>
+            </StyledH1>
             <AppContainer>
                 <Input />
                 <TodosContainer />

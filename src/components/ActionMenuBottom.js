@@ -11,7 +11,7 @@ const ActionMenuBottom = () => {
 
     return (
         <ActiveMenuContainer>
-            <mark>Todo's left: {TodosLeft}</mark>
+            <span>Todo's left: {TodosLeft}</span>
             <div className="clear-buttons">
                 <button className="button-left" type="button" onClick={() => dispatch(clearAllTodos())}>
                     Clear All
@@ -55,5 +55,8 @@ const ActiveMenuContainer = styled.div`
         .button-left {
             margin-right: 1rem;
         }
+    }
+    span {
+        background-color: var(--darkGrey);
     }
 `;

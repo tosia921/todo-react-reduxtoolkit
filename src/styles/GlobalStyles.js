@@ -8,7 +8,6 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: #efefef;
     --darkGrey: #bfbfbf;
-    --green: #49E20E;
   }
   * {
   box-sizing: border-box;
