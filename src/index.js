@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistStore } from 'redux-persist';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 
@@ -10,13 +12,17 @@ import 'normalize.css';
 
 import store from './redux/store';
 
+const persistor = persistStore(store);
+
 ReactDOM.render(
     <Provider store={store}>
-        <React.StrictMode>
-            <GlobalStyles />
-            <Typography />
-            <App />
-        </React.StrictMode>
+        <PersistGate loading={null} persistor={persistor}>
+            <React.StrictMode>
+                <GlobalStyles />
+                <Typography />
+                <App />
+            </React.StrictMode>
+        </PersistGate>
     </Provider>,
     document.getElementById('root')
 );
