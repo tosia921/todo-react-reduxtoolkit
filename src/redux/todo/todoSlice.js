@@ -26,9 +26,15 @@ export const todoSlice = createSlice({
                 );
             }
         },
+        clearAllTodos: (state) => {
+            state.todosArray = [];
+        },
+        clearCompletedTodos: (state) => {
+            state.todosArray = state.todosArray.filter((todo) => todo.completed !== true);
+        },
     },
 });
 
-export const { addTodo, removeTodo, completedTodo } = todoSlice.actions;
+export const { addTodo, removeTodo, completedTodo, clearAllTodos, clearCompletedTodos } = todoSlice.actions;
 
 export default todoSlice.reducer;

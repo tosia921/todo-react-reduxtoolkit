@@ -1,17 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearAllTodos, clearCompletedTodos } from '../redux/todo/todoSlice';
 
 const ActionMenuBottom = () => {
-    const handleClearAll = () => {};
-    const handleClearCompleted = () => {};
+    const dispatch = useDispatch();
+
+    const todos = useSelector((state) => state.todos.todosArray);
+    const TodosLeft = todos.filter((todo) => todo.completed !== true).length;
+
     return (
         <ActiveMenuContainer>
-            <mark>Todo's left: 2</mark>
+            <mark>Todo's left: {TodosLeft}</mark>
             <div className="clear-buttons">
-                <button className="button-left" type="button" onClick={handleClearAll}>
+                <button className="button-left" type="button" onClick={() => dispatch(clearAllTodos())}>
                     Clear All
                 </button>
-                <button type="button" onClick={handleClearCompleted}>
+                <button type="button" onClick={() => dispatch(clearCompletedTodos())}>
                     Clear Completed
                 </button>
             </div>

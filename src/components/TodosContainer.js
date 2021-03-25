@@ -8,9 +8,13 @@ const TodosContainer = () => {
 
     return (
         <StyledTodoContainer>
-            {todos.map((todo) => (
-                <SingleTodo key={todo.id} content={todo.content} id={todo.id} completed={todo.completed} />
-            ))}
+            {todos.length > 0 ? (
+                todos.map((todo) => (
+                    <SingleTodo key={todo.id} content={todo.content} id={todo.id} completed={todo.completed} />
+                ))
+            ) : (
+                <h2>your list is empty</h2>
+            )}
         </StyledTodoContainer>
     );
 };
@@ -18,7 +22,7 @@ const TodosContainer = () => {
 export default TodosContainer;
 
 const StyledTodoContainer = styled.ul`
-    height: fit-content;
+    min-height: 3rem;
     width: 40vw;
     background-color: var(--grey);
     padding: 2.5rem 1rem;
